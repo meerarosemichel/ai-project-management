@@ -1,0 +1,391 @@
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.settings-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.settings-header {
+    margin-bottom: 25px;
+}
+
+.settings-header h1 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 30px;
+}
+
+.settings-header p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+
+/* =========================
+   SETTINGS SECTION
+========================= */
+
+.settings-section {
+    margin-bottom: 22px;
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #1e293b;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-info h3 {
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: 18px;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SETTING ITEM
+========================= */
+
+.setting-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 15px;
+}
+
+.setting-item p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TOGGLE SWITCH
+========================= */
+
+.switch {
+    position: relative;
+
+    display: inline-block;
+
+    width: 50px;
+    height: 27px;
+
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #cbd5e1;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 21px;
+    height: 21px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #2563eb;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(23px);
+}
+
+
+/* =========================
+   AI PREFERENCES
+========================= */
+
+.ai-preference {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ai-preference:last-child {
+    border-bottom: none;
+}
+
+.ai-preference h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 15px;
+}
+
+.ai-preference p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.enabled-badge {
+    padding: 6px 12px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.settings-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.reset-button,
+.save-button {
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.reset-button {
+    border: 1px solid #cbd5e1;
+
+    background: white;
+
+    color: #475569;
+}
+
+.reset-button:hover {
+    background: #f1f5f9;
+}
+
+.save-button {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+.save-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   APPLICATION INFO
+========================= */
+
+.application-info {
+    padding: 22px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.application-info h3 {
+    margin: 0 0 8px;
+
+    color: #1e40af;
+}
+
+.application-info p {
+    max-width: 650px;
+
+    margin: 0 auto 10px;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.application-info span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+    .settings-page {
+        padding: 20px;
+    }
+
+    .setting-item,
+    .ai-preference {
+        gap: 15px;
+    }
+
+    .settings-actions {
+        justify-content: stretch;
+    }
+
+    .reset-button,
+    .save-button {
+        flex: 1;
+    }
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+
+    .settings-page {
+        padding: 0;
+
+        background: white;
+    }
+
+    .settings-actions {
+        display: none;
+    }
+
+}

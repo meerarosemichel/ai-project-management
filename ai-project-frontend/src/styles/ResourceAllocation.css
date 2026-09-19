@@ -1,0 +1,257 @@
+.resource-page {
+    padding: 30px;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.resource-header {
+    margin-bottom: 25px;
+}
+
+.resource-header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1e293b;
+}
+
+.resource-header p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+
+/* Input */
+
+.resource-input-card {
+    max-width: 8000px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.resource-input-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.resource-input-card select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 14px;
+    outline: none;
+}
+
+.resource-input-card select:focus {
+    border-color: #2563eb;
+}
+
+
+/* Button */
+
+.allocate-button {
+    margin-top: 18px;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.allocate-button:hover {
+    background: #1d4ed8;
+}
+
+.allocate-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.no-projects {
+    color: #64748b;
+}
+
+
+/* Result */
+
+.allocation-result {
+    max-width: 2000px;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.allocation-result h2 {
+    margin-top: 0;
+    color: #1e293b;
+}
+
+.project-name {
+    color: #64748b;
+}
+
+
+/* Resource Grid */
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.resource-card {
+    padding: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+}
+
+.resource-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.resource-card-header h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 16px;
+}
+
+.resource-card-header span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-weight: 700;
+}
+
+.resource-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Workload */
+
+.workload-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    color: #475569;
+
+    font-size: 13px;
+}
+
+.workload-header strong {
+    color: #2563eb;
+}
+
+.workload-bar {
+    height: 8px;
+
+    margin-top: 8px;
+
+    background: #e2e8f0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.workload-fill {
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+}
+
+
+/* Summary */
+
+.allocation-summary {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+}
+
+.allocation-summary h3 {
+    margin-top: 0;
+
+    color: #1e3a8a;
+}
+
+.allocation-summary p {
+    color: #475569;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .resource-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .resource-page {
+        padding: 20px;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,299 @@
+.ai-planner-page {
+    padding: 30px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.ai-planner-header {
+    margin-bottom: 25px;
+}
+
+.ai-planner-header h1 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 30px;
+}
+
+.ai-planner-header p {
+    color: #64748b;
+    margin-top: 8px;
+}
+
+
+/* Project Selection */
+
+.planner-input-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    max-width: 8000px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.planner-input-card label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-weight: 600;
+    color: #334155;
+}
+
+.planner-input-card select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.planner-input-card select:focus {
+    border-color: #2563eb;
+}
+
+
+/* Generate Button */
+
+.generate-plan-button {
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.generate-plan-button:hover {
+    background: #1d4ed8;
+}
+
+.generate-plan-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* AI Result */
+
+.ai-plan-result {
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    max-width: 8000px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.plan-title h2 {
+    margin-top: 0;
+    color: #1e293b;
+}
+
+.plan-title h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.plan-title p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* Project Phases */
+
+.plan-section {
+    margin-top: 30px;
+}
+
+.plan-section h2,
+.resources-section h2 {
+    color: #1e293b;
+}
+
+
+/* Phase Cards */
+
+.phases-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.phase-card {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+.phase-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.phase-number {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.phase-header h3 {
+    margin: 0;
+
+    color: #1e293b;
+}
+
+.phase-duration {
+    padding: 6px 10px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Status */
+
+.phase-status {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 5px 10px;
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* Tasks */
+
+.phase-card h4 {
+    margin-bottom: 8px;
+
+    color: #334155;
+}
+
+.phase-card ul {
+    padding-left: 20px;
+
+    margin-bottom: 0;
+}
+
+.phase-card li {
+    color: #64748b;
+
+    margin-bottom: 8px;
+
+    line-height: 1.4;
+}
+
+
+/* Resources */
+
+.resources-section {
+    margin-top: 30px;
+}
+
+.resources-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.resource-card {
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    color: #334155;
+
+    font-weight: 600;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .phases-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .ai-planner-page {
+        padding: 20px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .phase-header {
+        flex-direction: column;
+    }
+}
