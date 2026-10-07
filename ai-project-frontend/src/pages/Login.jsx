@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/Login.css";
 import { useUser } from "../context/UserContext";
+
 function Login() {
     const navigate = useNavigate();
-    const { setUser } = useUser();
+    const { login } = useUser();
+
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -19,6 +21,7 @@ function Login() {
             [name]: value,
         });
     };
+
     const handleLogin = (event) => {
         event.preventDefault();
 
@@ -30,15 +33,18 @@ function Login() {
             alert("Please fill all fields.");
             return;
         }
-        // setUser({
-        //     username: formData.username,
-        //     email: formData.email,
-        // });
+
+        // Save logged-in user
+        login({
+            username: formData.username,
+            email: formData.email,
+        });
 
         alert("Login Successful!");
 
         navigate("/dashboard");
     };
+
     return (
         <div className="login-container">
             <div className="login-card">
@@ -94,7 +100,6 @@ function Login() {
                     <p className="forgot-password">
                         Forgot Password?
                     </p>
-
                 </form>
 
             </div>

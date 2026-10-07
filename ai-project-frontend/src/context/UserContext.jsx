@@ -6,14 +6,19 @@ export function UserProvider({ children }) {
 
     const [user, setUser] = useState(() => {
 
-        const savedUser =
-            localStorage.getItem("loggedInUser");
+        const savedUser = localStorage.getItem("loggedInUser");
 
-        return savedUser
-            ? JSON.parse(savedUser)
-            : null;
+        if (!savedUser) {
+            return null;
+        }
+
+        try {
+            return JSON.parse(savedUser);
+        } catch {
+            localStorage.removeItem("loggedInUser");
+            return null;
+        }
     });
-
 
     const login = (userData) => {
 
@@ -25,16 +30,12 @@ export function UserProvider({ children }) {
         );
     };
 
-
     const logout = () => {
 
         setUser(null);
 
-        localStorage.removeItem(
-            "loggedInUser"
-        );
+        localStorage.removeItem("loggedInUser");
     };
-
 
     return (
         <UserContext.Provider
@@ -48,7 +49,6 @@ export function UserProvider({ children }) {
         </UserContext.Provider>
     );
 }
-
 
 export function useUser() {
 
